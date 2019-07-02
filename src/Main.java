@@ -28,18 +28,18 @@ public class Main {
         list3.add(new Integer(4));
         list3.add(new Integer(2));
         list3.add(new Integer(1));
-        System.out.println(isIntersection(list1, list2)); // true
-        System.out.println(isIntersection(list1, list3)); // false
+        System.out.println(isIntersection(list1, list2)); // 5
+        System.out.println(isIntersection(list1, list3)); // -1
     }
 
-    public static boolean isIntersection(List<Integer> list1, List<Integer> list2) {
+    public static Integer isIntersection(List<Integer> list1, List<Integer> list2) {
         for (Integer object1 : list1) {
             for (Integer object2 : list2) {
                 if (object1 == object2) {
-                    return true;
+                    return object1;
                 }
             }
         }
-        return false;
+        return -1;
     }
 }
